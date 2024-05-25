@@ -1,48 +1,52 @@
 def sumar(x:int,y:int) -> int:
-    """Calcula la suma de dos numeros.
+    """
+    Brief:Calcula la suma entre dos numeros.
 
     Args:
         x (int): Primer operando 
         y (int): Segundo operando
 
     Returns:
-        int: Retorna el resultado de la suma
+        int: Retorna el resultado de la suma.
     """
     return x + y
 
 def restar(x:int,y:int) -> int:
-    """_summary_
+    """
+    Brief:Calcula la resta entre dos numeros.
 
     Args:
-        x (int): _description_
-        y (int): _description_
+        x (int): Primer operando 
+        y (int): Segundo operando
 
     Returns:
-        int: _description_
+        int: Retorna el resultado de la resta.
     """
     return x - y
 
 def multiplicar(x:int,y:int) -> int:
-    """_summary_
+    """
+    Brief:Calcula la multiplicacion entre dos numeros.
 
     Args:
-        x (int): _description_
-        y (int): _description_
-
+        x (int): Primer operando 
+        y (int): Segundo operando
+    
     Returns:
-        int: _description_
+        int: Retorna el resultado de la multiplicacion.
     """
     return x * y
 
 def dividir(x:int,y:int) -> float:
-    """_summary_
+    """
+    Brief:Calcula la division entre dos numeros.
 
     Args:
-        x (int): _description_
-        y (int): _description_
-
+    x (int): Primer operando 
+    y (int): Segundo operando
+    
     Returns:
-        float: _description_
+        float: Retorna el resultado de la divison.
     """
     try:
         resultado = x / y
@@ -52,13 +56,14 @@ def dividir(x:int,y:int) -> float:
         return resultado
 
 def factorial(x:int) -> int:
-    """_summary_
+    """
+    Brief:Calcula el factorial de un numero.
 
     Args:
-        x (int): _description_
+        x (int): Operando
 
     Returns:
-        int: _description_
+        int: Retorna el factorial de un numero.
     """
     fact = None
     

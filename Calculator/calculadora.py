@@ -1,20 +1,19 @@
-"""
-1.elegir operando
-2. elegir segundo operando (no puedo entrar sin entrar al 1)
-3. elegir operacio (no puedo enrar sin entrar a 1 y 2)
-4. mostrar resultado (no puedo entrar sin ninguno de los anteriores)
-5. salir"""
-
 import operaciones as op
 
-def ingresar_operando(mensaje) -> int:
-    """_summary_
+def ingresar_operando(mensaje:str) -> int:
+    """
+    Brief: Solicita al usuario la entrada de un numero entero,
+            y verifica que la entrada sea un numero y no una cadena de caracteres.
+            Si el usuario ingresa letras u otros caracteres, 
+            sigue solicitando la entrada hasta que sea un numero entero.
 
     Args:
-        mensaje (_type_): _description_
+        mensaje (str): Es un string que se utilizara como mensaje
+                        para solicitar la entrada del usuario.
 
     Returns:
-        int: _description_
+        int: Retorna el numero entero ingresado por el usuario,
+                solo si representa un numero entero.
     """
     while True:
         entrada = input(mensaje)
@@ -30,27 +29,31 @@ def ingresar_operando(mensaje) -> int:
 menu = ["\n---------------------------Caclculadora---------------------------------\n",
         "1.Ingresar 1er operando: (A=x) ","2.Ingresar 2do operando: (B=y)","3.Elegir operacion: ","4.Mostrar resultado: ","5.Salir\n"]
 
-def mostrar_menu(a,b):
-    """_summary_
-
+def mostrar_menu(a:int,b:int):
+    """
+    Brief:Muestra un menu de opciones.
+            Reemplaza 'x' e 'y' cuando estan definidas con un entero.
+    
     Args:
-        a (_type_): _description_
-        b (_type_): _description_
+        a (_type_): Primer operando, si no esta definido muestra 'x'
+        b (_type_): Segundo operando, si no esta definido muestra 'y'
+    
     """
     valor_a = str(a) if a is not None else "x"
     valor_b = str(b) if b is not None else "y"
     for opcion in menu:
         print(opcion.replace("x", valor_a).replace("y", valor_b))
 
-def calcular_operaciones(a,b):
-    """_summary_
+def calcular_operaciones(a:int,b:int)->dict:
+    """
+    Brief: Calcula todas las operaciones matematicas.
 
     Args:
-        a (_type_): _description_
-        b (_type_): _description_
+        a (int): Primer operando.
+        b (int): Segundo operando.
 
     Returns:
-        _type_: _description_
+        dict: Retorna un diccionario con los resultados de las operaciones.
     """
     resultados = {
         'suma': op.sumar(a,b),
@@ -63,11 +66,14 @@ def calcular_operaciones(a,b):
     
     return resultados
 
-def mostrar_resultados(resultados):
-    """_summary_
-
+def mostrar_resultados(resultados:dict):
+    """
+    Brief: Muestra por consola los resultados de las operaciones.
+    
     Args:
-        resultados (_type_): _description_
+        resultados (dict): Recibe un diccionario con los resultados de las operaciones.
+    
+    
     """
     results = [f"El resultado de A+B es: {resultados['suma']}",
                 f"El resultado de A-B es: {resultados['resta']}",

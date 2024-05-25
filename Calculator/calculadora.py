@@ -47,11 +47,11 @@ def mostrar_menu(a:int,b:int):
 def calcular_operaciones(a:int,b:int)->dict:
     """
     Brief: Calcula todas las operaciones matematicas.
-
+    
     Args:
         a (int): Primer operando.
         b (int): Segundo operando.
-
+    
     Returns:
         dict: Retorna un diccionario con los resultados de las operaciones.
     """
@@ -72,7 +72,6 @@ def mostrar_resultados(resultados:dict):
     
     Args:
         resultados (dict): Recibe un diccionario con los resultados de las operaciones.
-    
     
     """
     results = [f"El resultado de A+B es: {resultados['suma']}",
